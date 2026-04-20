@@ -201,6 +201,11 @@ def plot_structural_variance(variance: pd.DataFrame):
 
         strip_plot(ax, data_groups, positions, colors)
 
+        for pos, grp in zip(positions, data_groups):
+            if len(grp) > 0:
+                ax.scatter(pos, np.mean(grp), marker="D", color="white",
+                           edgecolors="black", s=40, zorder=5, linewidths=1.2)
+
         ax.set_xticks(positions)
         ax.set_xticklabels([REGIME_LABELS[r] for r in REGIME_ORDER], fontsize=9)
         ax.set_ylabel("Structural Variance (Å RMSD)")
