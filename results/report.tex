@@ -120,19 +120,19 @@ Table~\ref{tab:results} summarizes mean catalytic RMSD and pLDDT across all six 
 
 \begin{table}[h]
 \centering
-\caption{Summary of structural metrics per experiment. Catalytic RMSD is computed after Kabsch alignment of predicted catalytic triad C$\alpha$ atoms onto the reference crystal structure. Mean pLDDT is averaged globally across the full designed sequence. Lower RMSD and higher pLDDT indicate better designs. Bold indicates best value per enzyme per metric. $^\dagger$Fewer predictions due to ColabFold \texttt{--stop-at-score 70}: prediction halts after the first model exceeds pLDDT 70, so motif\_only sequences that fold well generate fewer than 5 model predictions per sequence.}
+\caption{Summary of structural metrics per experiment. Catalytic RMSD (mean $\pm$ SD) is computed after Kabsch alignment of predicted catalytic triad C$\alpha$ atoms onto the reference crystal structure. Mean pLDDT is averaged globally across the full designed sequence. Lower RMSD and higher pLDDT indicate better designs. Bold indicates best mean value per enzyme per metric. $^\dagger$Fewer predictions due to ColabFold \texttt{--stop-at-score 70}: prediction halts after the first model exceeds pLDDT 70, so motif\_only sequences that fold well generate fewer than 5 model predictions per sequence.}
 \label{tab:results}
-\begin{tabular}{llrrrr}
+\begin{tabular}{llrr r}
 \toprule
-Enzyme & Regime & Mean Cat.\ RMSD (\AA{}) & SD & Mean pLDDT & $N$ \\
+Enzyme & Regime & Mean Cat.\ RMSD (\AA{}) & Mean pLDDT & $N$ \\
 \midrule
-\textbf{1PPF (Elastase)} & \textbf{motif\_only} & \textbf{4.62} & 4.66 & \textbf{65.5} & 165$^\dagger$ \\
-                & shell5             & 7.00  & 2.54 & 40.7          & 500 \\
-                & shell8             & 9.22  & \textbf{2.56} & 30.7 & 500 \\
+1PPF (Elastase) & \textbf{motif\_only} & \textbf{4.62 $\pm$ 4.66} & \textbf{65.5} & 165$^\dagger$ \\
+                & shell5              & 7.00 $\pm$ 2.54          & 40.7          & 500 \\
+                & shell8              & 9.22 $\pm$ 2.56          & 30.7          & 500 \\
 \midrule
-1CA2 (CA-II)   & motif\_only        & 5.42  & 4.27 & \textbf{58.5} & 254$^\dagger$ \\
-               & shell5             & 3.07  & 2.32 & 41.0          & 500 \\
-               & \textbf{shell8}    & \textbf{2.70} & \textbf{1.69} & 34.0 & 500 \\
+1CA2 (CA-II)    & motif\_only         & 5.42 $\pm$ 4.27          & \textbf{58.5} & 254$^\dagger$ \\
+                & shell5              & 3.07 $\pm$ 2.32          & 41.0          & 500 \\
+                & \textbf{shell8}     & \textbf{2.70 $\pm$ 1.69} & 34.0          & 500 \\
 \bottomrule
 \end{tabular}
 \end{table}
