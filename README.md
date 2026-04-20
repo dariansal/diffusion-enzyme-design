@@ -7,7 +7,7 @@ Enzyme catalysis depends on the precise three-dimensional positioning of a small
 Tighter motif conditioning during RFdiffusion backbone generation will produce designs with lower catalytic RMSD relative to the reference geometry, higher local AlphaFold2 confidence (pLDDT) at active-site residues, and reduced structural variance across multiple AlphaFold2 predictions. I test this across two enzyme systems representing fundamentally different catalytic architectures — a Ser-His-Asp hydrogen-bond relay (1PPF) and a Zn²⁺-coordinated metal triad (1CA2) — to evaluate whether controllability generalizes across enzyme classes.
 
 ![Summary Panel](results/analysis/figures/fig5_summary_panel.png)
-*8Å shell conditioning reduces catalytic RMSD by 77% and structural variance by 90% for the Zn²⁺-coordinated active site (1CA2), while the Ser-His-Asp catalytic triad (1PPF) shows minimal mean improvement — revealing an enzyme-class-dependent response to motif conditioning.*
+*8Å shell conditioning reduces catalytic RMSD by 50% and structural variance by 63% for the Zn²⁺-coordinated active site (1CA2), while the Ser-His-Asp catalytic triad (1PPF) worsens monotonically with tighter conditioning — revealing an enzyme-class-dependent response to motif conditioning.*
 
 ---
 
@@ -15,14 +15,14 @@ Tighter motif conditioning during RFdiffusion backbone generation will produce d
 
 | Enzyme | Regime | Mean Cat. RMSD (Å) | SD |
 |--------|--------|--------------------|----|
-| 1CA2 (Carbonic Anhydrase II) | motif_only | 11.39 | 13.60 |
-| | shell5 | 4.03 | 2.53 |
-| | **shell8** | **2.61** | **1.55** |
-| 1PPF (Leukocyte Elastase) | motif_only | 9.57 | 12.22 |
-| | shell5 | 10.39 | 9.24 |
-| | shell8 | 9.14 | 2.15 |
+| 1CA2 (Carbonic Anhydrase II) | **motif_only** | 5.42 | 4.27 |
+| | shell5 | 3.07 | 2.32 |
+| | **shell8** | **2.70** | **1.69** |
+| 1PPF (Leukocyte Elastase) | **motif_only** | **4.62** | 4.66 |
+| | shell5 | 7.00 | 2.54 |
+| | shell8 | 9.22 | 2.56 |
 
-**Key finding:** Shell conditioning reduces catalytic RMSD by 77% for the metal-coordinated Zn²⁺ active site (1CA2) but has limited effect on the hydrogen-bond-relay Ser-His-Asp triad (1PPF).
+**Key finding:** Shell conditioning reduces catalytic RMSD by 50% for the metal-coordinated Zn²⁺ active site (1CA2). For the hydrogen-bond-relay Ser-His-Asp triad (1PPF), conditioning monotonically worsens RMSD — motif-only (least constrained) produces the best geometry at 4.62 Å.
 
 ---
 
