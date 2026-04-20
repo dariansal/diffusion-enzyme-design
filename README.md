@@ -33,6 +33,7 @@ A full write-up of the experimental design, results, and discussion is available
 
 ![Summary Panel](results/analysis/figures/fig5_summary_panel.png)
 *8Å shell conditioning reduces catalytic RMSD by 50% and structural variance by 63% for the Zn²⁺-coordinated active site (1CA2), while the Ser-His-Asp catalytic triad (1PPF) worsens monotonically with tighter conditioning — revealing an enzyme-class-dependent response to motif conditioning.*
+
 ---
 
 ## Repository Structure
