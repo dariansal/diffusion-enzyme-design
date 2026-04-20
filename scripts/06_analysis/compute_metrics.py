@@ -464,10 +464,14 @@ def main():
             n_predictions=("catalytic_rmsd", "count"),
             mean_cat_rmsd=("catalytic_rmsd", "mean"),
             std_cat_rmsd=("catalytic_rmsd", "std"),
+            median_cat_rmsd=("catalytic_rmsd", "median"),
+            iqr_cat_rmsd=("catalytic_rmsd", lambda x: x.quantile(0.75) - x.quantile(0.25)),
             mean_plddt_global=("plddt_global", "mean"),
             std_plddt_global=("plddt_global", "std"),
+            median_plddt_global=("plddt_global", "median"),
             mean_plddt_cat=("plddt_catalytic", "mean"),
             std_plddt_cat=("plddt_catalytic", "std"),
+            median_plddt_cat=("plddt_catalytic", "median"),
         )
         .reset_index()
     )
@@ -478,6 +482,8 @@ def main():
         .agg(
             mean_structural_variance=("structural_variance", "mean"),
             std_structural_variance=("structural_variance", "std"),
+            median_structural_variance=("structural_variance", "median"),
+            iqr_structural_variance=("structural_variance", lambda x: x.quantile(0.75) - x.quantile(0.25)),
         )
         .reset_index()
     )
