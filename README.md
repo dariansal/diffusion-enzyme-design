@@ -8,24 +8,6 @@ Tighter motif conditioning during RFdiffusion backbone generation will produce d
 
 ---
 
-## Results Summary
-
-![Summary Panel](results/analysis/figures/fig5_summary_panel.png)
-*8Å shell conditioning reduces catalytic RMSD by 50% and structural variance by 63% for the Zn²⁺-coordinated active site (1CA2), while the Ser-His-Asp catalytic triad (1PPF) worsens monotonically with tighter conditioning — revealing an enzyme-class-dependent response to motif conditioning.*
-
-| Enzyme | Regime | Mean Cat. RMSD (Å) |
-|--------|--------|---------------------|
-| 1CA2 (Carbonic Anhydrase II) | motif_only | 5.42 ± 4.27 |
-| | shell5 | 3.07 ± 2.32 |
-| | **shell8** | **2.70 ± 1.69** |
-| 1PPF (Leukocyte Elastase) | **motif_only** | **4.62 ± 4.66** |
-| | shell5 | 7.00 ± 2.54 |
-| | shell8 | 9.22 ± 2.56 |
-
-**Key finding:** Shell conditioning reduces catalytic RMSD by 50% for the metal-coordinated Zn²⁺ active site (1CA2). For the hydrogen-bond-relay Ser-His-Asp triad (1PPF), conditioning monotonically worsens RMSD — motif-only (least constrained) produces the best geometry at 4.62 Å.
-
----
-
 ## Enzyme Systems
 
 | System | PDB | Enzyme | Catalytic Residues | Motif Type |
@@ -43,8 +25,14 @@ Tighter motif conditioning during RFdiffusion backbone generation will produce d
 
 6 experiments total (2 enzymes × 3 regimes), 20 RFdiffusion backbones each.
 
+---
+
+## Results Summary
 A full write-up of the experimental design, results, and discussion is available in [`results/report.pdf`](results/report.pdf).
 
+
+![Summary Panel](results/analysis/figures/fig5_summary_panel.png)
+*8Å shell conditioning reduces catalytic RMSD by 50% and structural variance by 63% for the Zn²⁺-coordinated active site (1CA2), while the Ser-His-Asp catalytic triad (1PPF) worsens monotonically with tighter conditioning — revealing an enzyme-class-dependent response to motif conditioning.*
 ---
 
 ## Repository Structure
