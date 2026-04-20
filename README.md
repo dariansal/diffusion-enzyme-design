@@ -61,11 +61,6 @@ A full write-up of the experimental design, results, and discussion is available
 ├── data/
 │   ├── pdb/                    # Raw PDB downloads (1PPF.pdb, 1CA2.pdb)
 │   └── motifs/                 # Per-experiment motif PDBs and contig strings
-├── outputs/                    # Per-experiment pipeline outputs
-│   └── <experiment>/
-│       ├── rfdiffusion/        # 20 backbone PDBs
-│       ├── proteinmpnn/        # 100 FASTA sequences
-│       └── colabfold/          # AlphaFold2 predictions
 ├── results/
 │   ├── analysis/
 │   │   ├── figures/            # 5 publication figures (PDF)
